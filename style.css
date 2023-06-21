@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    color: var(--text);
+    user-select: none;
+    background: var(--bgcolor);
+}
+
+img , div img {
+    background-color: aqua;
+}
+
+:root {
+    --bgcolor: rgba(0,0,0,.9);
+    --text: rgba(243, 222, 222, 0.945);
+    --button-bg:rgba(85, 77, 77, 0.897);
+    --button-bg-hover:rgb(124, 119, 119);
+    --button-border:rgba(117, 110, 110, 0.733);
+}
+
+/*
+ sroll bar 
+*/
+
+/* width */
+::-webkit-scrollbar {
+    max-width: 12px;
+    max-height: 12px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--button-bg);
+    border-radius: 25px;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #09a9f356;
+    border-radius: 20px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: cyan;
+}
+
+/*
+end of scroll
+*/
+
+
+
+/* class button */
+.button {
+    background: var(--button-bg);
+}
+
+.button:hover {
+    background: var(--button-bg-hover);
+}
+
+/* Main Section */
+
+section .home {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+
+.title-bar {
+    padding-top: 10px;
+    height: 10%;
+    width: 100%;
+    background: var(--bgcolor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+}
+
+#title {
+    font-size: 25px;
+}
+
+#logo {
+    height: inherit;
+    width: 50px;
+    margin-left: 20px;
+}
+
+/* Navigation Menu */
+
+.menu-section {
+    height: calc(100% - 50% - 10px);
+    width: 100%;
+    background: var(--bgcolor);
+    padding-top: 20px;
+}
+
+.navigation {
+    height: 40%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list,
+.setting-list {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+#rate {
+    border: 1px solid var(--button-bg-hover);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--text);
+}
+
+.nav-list img, .setting-list img {
+    height: inherit;
+    width: auto;
+}
+
+.nav-list li:hover , .setting-list li:hover{
+    background: rgba(109, 104, 104, 0.8);
+}
+
+
+.lighting {
+    height: 10%;
+    width: 100%;
+}
+/* ----------------------arrangement section--------------------------- */
+.arrange {
+    height: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 95% 5%;
+    border-bottom: 1px solid var(--button-border);
+    border-top: 1px solid var(--button-border);
+}
+
+.track-contanier {
+    height: inherit;
+    width: 100%;
+    overflow: auto;
+}
+
+.track {
+    height: 25%;
+    width: inherit;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.track .track-box {
+    height: 100%;
+    min-width: 5%;
+}
+
+/* track buttons */
+.track-buttons {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.track-buttons .img {
+    height: 10px;
+    width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* Track Menu List */
+#track-menu {
+    height: 100%;
+    width: 200px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    color: var(--text);
+    display: none;
+}
+
+#track-menu div:hover,
+.track-menu-list-item:hover {
+    background: var(--button-bg-hover);
+}
+
+#track-menu #menu-toggle-close{
+    height: 100%;
+    width: auto;
+    max-width: 45px;
+    background: var(--button-bg);
+    display: block;
+}
+
+#track-menu .track-meun-list-holder {
+    height: inherit;
+    width: auto;
+    display: block;
+    overflow-y: auto;
+}
+
+#track-menu .track-meun-list-holder li {
+    height: 100%;
+    max-height: 50px;
+    width: auto;
+    background: var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#track-menu .track-meun-list-holder li:hover{
+    background: var(--button-bg-hover);
+}
+/* ----------------------arrangement section--------------------------- */
+
+/* 
+select section 
+*/
+.select-section {
+    width: 100%;
+    max-height: 370px;
+    min-height: 370px;
+    display: grid;
+    grid-template-columns: 30% 65% 5%;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgcolor);
+    margin-top: 5px;
+}
+
+.group-select {
+    max-height: fit-content;
+    height: inherit;
+    width: inherit;
+    padding: 10px;
+}
+
+.group-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+}
+
+/* Group Scetion */
+.beat-container {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Beat Select */
+
+
+.beat-select-main {
+    height: 100%;
+    width: 100%;
+    display: block;
+    /* background-color: blueviolet; */
+    padding: 10px;
+}
+
+.beat-select {
+    padding: auto;
+    max-height: 350px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: flex-start;
+    align-items: start;
+    gap: 5px;
+    overflow-y: auto;
+}
+
+/* beat Pad */
+.beat-pad {
+    height: 75px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--text);
+}

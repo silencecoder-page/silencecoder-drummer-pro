@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Pad</title>
+
+    <!-- jquery -->
+    <script src="./jquery-3.7.0.min.js" deff></script>
+    <!-- custom link -->
+    <link rel="stylesheet" href="lightup.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="drag.css">
+   
+    <!-- custom script -->
+    <script src="./media.js" defer></script>
+    <script src="./background.js" defer></script>
+    <script src="./arrange.js" defer></script>
+    <script src="./index.js" defer></script>
+   
+</head>
+<body>
+
+    <section class="home">
+
+        <!-- title bar section -->
+    <div class="title-bar">
+        <img id="logo" src="./64.png" alt="" srcset="">
+        <span id="title" class="title">Drummer Pro</span>
+        <div></div>
+    </div>
+    <!-- beat section -->
+    <div class="menu-section">
+
+        <!-- navigation and setting display -->
+
+        <div class="navigation">
+
+            <div class="navigation-buttons">
+                <ul class="nav-list">
+                    <img src="./icons/home_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img src="./icons/equalizer_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img src="./icons/settings_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                </ul>
+            </div>
+
+            <div class="setting">
+
+                <ul class="setting-list">
+                    <img id="increase-rate" src="./icons/add_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="" srcset=""></li>
+                    <span id="rate">1000</span>
+                    <img id="decrease-rate" src="./icons/minimize_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- lightenin system -->
+
+        <div class="lighting">
+            <ul class="light-list">
+                <li id="lightBorder-1">
+                    <div id="lightBulb-1"></div>
+                </li>
+                <li id="lightBorder-2"><div id="lightBulb-2"></div></li>
+                <li id="lightBorder-3"><div id="lightBulb-3"></div></li>
+                <li id="lightBorder-4"><div id="lightBulb-4"></div></li>
+                <li id="lightBorder-5"><div id="lightBulb-5"></div></li>
+                <li id="lightBorder-6"><div id="lightBulb-6"></div></li>
+                <li id="lightBorder-7"><div id="lightBulb-7"></div></li>
+                <li id="lightBorder-8"><div id="lightBulb-8"></div></li>
+                <li id="lightBorder-9"><div id="lightBulb-9"></div></li>
+                <li id="lightBorder-10"><div id="lightBulb-10"></div></li>
+                <li id="lightBorder-11"><div id="lightBulb-11"></div></li>
+                <li id="lightBorder-12"><div id="lightBulb-12"></div></li>
+                <li id="lightBorder-13"><div id="lightBulb-13"></div></li>
+                <li id="lightBorder-14"><div id="lightBulb-14"></div></li>
+                <li id="lightBorder-15"><div id="lightBulb-15"></div></li>
+                <li id="lightBorder-16"><div id="lightBulb-16"></div></li>
+            </ul>
+        </div>
+
+        <!-- beate arrangement section -->
+
+        <div class="arrange">
+            <div class="track-contanier">
+                <div class="track">
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                    <div class="track-box"></div>
+                </div>
+            </div>
+
+            <div class="track-buttons">
+                <div id='track-menu'>
+                    <img id="menu-toggle-close" src="./icons/left_panel_close_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <ul class="track-meun-list-holder">
+                        <li id="add-row" class="track-menu-list-item">ADD ROW</li>
+                        <li id="add-column" class="track-menu-list-item">ADD COLUMN</li>
+                        <li id="del-roll" class="track-menu-list-item">DELETE COLUMN</li>
+                        <li id="reset" class="track-menu-list-item">RESET ALL</li>
+                    </ul>
+                </div>
+                <img id="menu-toggle-open" src="./icons/left_panel_open_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                <img id="play-btn" src="./icons/play_arrow_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                <img id="stop-btn" src="./icons/stop_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- end off menu section -->
+
+    <div class="select-section">
+
+        <!-- Group Select -->
+        <div class="group-select scroll-wheel">
+            <!-- template -->
+            <!-- <div class="beat-container button-outline">
+                <span class="button">kick</span>
+            </div> -->
+            <!-- .end of template -->
+        </div>
+        
+        <!-- Beate Select -->
+        <div class="beat-select-main">
+            <!-- <div class="beat-pad">
+                <span>H2</span>
+            </div> -->
+        </div>
+
+        <div class="social-buttons">
+
+        </div>
+
+    </div>
+
+    <!-- End of Main Section -->
+    </section>
+
+</body>
+</html>

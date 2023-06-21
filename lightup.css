@@ -1,0 +1,199 @@
+
+/* lighening system */
+.lighting {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+    border-top: 1px solid rgba(202, 215, 230, 0.616);
+    border-bottom: 1px solid rgba(212, 221, 231, 0.616);
+}
+
+.light-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+
+.light-list li {
+    list-style: none;
+    height: 55px;
+    width: 100%;
+    /* border: 1px solid rgba(5, 55, 112, 0.616); */
+    /* border-radius: 12px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.light-list li div {
+    height: 90%;
+    width: 100%;
+    /* background: rgb(42, 102, 14); */
+    /* border-radius: 5px; */
+}
+
+/* Add light class */
+
+
+light-list li div {
+    height: 90%;
+    width: 100%;
+    /* background: rgb(42, 102, 14); */
+}
+
+/* All Lights  background*/
+
+.light-list .lit-bg-1 {
+    background: rgba(0, 0, 255, 0.5);  
+}
+
+.light-list .lit-bg-2 {
+    background: rgba(0, 0, 255, 0.4);
+}
+
+.light-list .lit-bg-3 {
+    background: rgba(0, 0, 255, 0.3);
+}
+
+.light-list .lit-bg-4 {
+    background: rgba(0, 255, 0, 0.3);
+}
+
+.light-list .lit-bg-5 {
+    background: rgba(0, 255, 0, 0.4)
+}
+
+.light-list .lit-bg-6 {
+    background: rgba(0, 255, 0, 0.5)
+}
+
+.light-list .lit-bg-7 {
+    background: rgba(255, 255, 0, 0.3)
+}
+
+.light-list .lit-bg-8 {
+    background: rgba(255, 151, 0, 0.3)
+}
+
+.light-list .lit-bg-9 {
+    background: rgba(255, 111, 0, 0.3)
+}
+
+.light-list .lit-bg-10 {
+    background: rgba(255, 51, 0, 0.4)
+}
+
+.light-list .lit-bg-11 {
+    background: rgba(255, 11, 0, 0.5)
+}
+
+.light-list .lit-bg-12 {
+    background: rgba(255, 131, 224, 0.3)
+}
+
+.light-list .lit-bg-13 {
+    background: rgba(0, 131, 224, 0.4)
+}
+
+.light-list .lit-bg-14 {
+    background: rgba(0, 13, 224, 0.5)
+}
+
+.light-list .lit-bg-15 {
+    background: rgba(255, 31, 24, 0.3);   
+}
+
+.light-list .lit-bg-16 {
+    background: rgba(255, 1, 4, 0.5)
+}
+
+/* all light border */
+
+.light-list .lit-border-1 {
+    border-color: rgba(0, 0, 255, 0.5);  
+}
+
+.light-list .lit-border-2 {
+    border-color: rgba(0, 0, 255, 0.4);
+}
+
+.light-list .lit-border-3 {
+    border-color: rgba(0, 0, 255, 0.3);
+}
+
+.light-list .lit-border-4 {
+    border-color: rgba(0, 255, 0, 0.3);
+}
+
+.light-list .lit-border-5 {
+    border-color: rgba(0, 255, 0, 0.4)
+}
+
+.light-list .lit-border-6 {
+    border-color: rgba(0, 255, 0, 0.5)
+}
+
+.light-list .lit-border-7 {
+    border-color: rgba(255, 255, 0, 0.3)
+}
+
+.light-list .lit-border-8 {
+    border-color: rgba(255, 151, 0, 0.3)
+}
+
+.light-list .lit-border-9 {
+    border-color: rgba(255, 111, 0, 0.3)
+}
+
+.light-list .lit-border-10 {
+    border-color: rgba(255, 51, 0, 0.4)
+}
+
+.light-list .lit-border-11 {
+    border-color: rgba(255, 11, 0, 0.5)
+}
+
+.light-list .lit-border-12 {
+    border-color: rgba(255, 131, 224, 0.3)
+}
+
+.light-list .lit-border-13 {
+    border-color: rgba(0, 131, 224, 0.4)
+}
+
+.light-list .lit-border-14 {
+    border-color: rgba(0, 13, 224, 0.5)
+}
+
+.light-list .lit-border-15 {
+    border-color: rgba(255, 31, 24, 0.3);   
+}
+
+.light-list .lit-border-16 {
+    border-color: rgba(255, 1, 4, 0.5)
+}
+
+
+/* Box Light */
+
+.track .track-box {
+    background-color: rgba(0, 13, 224, 0.5);
+}
+
+.track .box-play-bg {
+    background: transparent;
+}
+
+.track .box-play-main-bg {
+    background: rgba(253, 216, 4, 0.521);
+    color: black;
+
+}
+
+.track-box .pad-added {
+    background: rgb(226, 95, 95);
+    color: black;
+}
+

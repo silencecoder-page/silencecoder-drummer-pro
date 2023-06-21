@@ -1,0 +1,17 @@
+/* draged item class */
+.pad-added {
+    height: inherit;
+    color: rgb(231, 215, 215);
+    background-color: rgba(121, 12, 136, 0.425);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad-added span {
+    font-size: 12px;
+}
+
+.pad-drag-over {
+    border: 1px dotted white; 
+}
