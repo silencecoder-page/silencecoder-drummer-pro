@@ -3,10 +3,11 @@
 class florencentLight {
 
     constructor(){
-        this.currentBulb = 1
+        this.currentBulb = 0
         this.lastBulb = 16
         this.allIntervals = []
         this.lightInterval = 500
+        this.color;
     }
 
 
@@ -16,30 +17,31 @@ class florencentLight {
         let lightInterval = this.lightInterval
         let allIntervals = this.allIntervals
 
-        let colors = [
-
-        ] 
-        let addLight =()=>{
-            $(`#lightBorder-${currentBulb}`
-            )[0].classList.add(`lit-border-${currentBulb}`)
-            $(`#lightBulb-${currentBulb}`
-            )[0].classList.add(`lit-bg-${currentBulb}`)
+        const getColor = () => {
+            return `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`
         }
-        let removeLight=()=>{
-            $(`#lightBorder-${currentBulb}`
-            ).removeClass(`lit-border-${currentBulb}`)
-            $(`#lightBulb-${currentBulb}`
-            ).removeClass(`lit-bg-${currentBulb}`)}
+        
+        const addLight =()=>{
+            let color = getColor()
+            $(`#lightBorder-${currentBulb}`).css('border', '1px solid '+ color)
+            $(`#lightBulb-${currentBulb}`).css('background', color)
+        }
+
+        const removeLight=()=>{
+            $(`#lightBorder-${currentBulb}`).css('border', 'none')
+            $(`#lightBulb-${currentBulb}`).css('background', 'black')
+        }
+
         // eventlistener
         let eventID = window.setInterval(function(){
             window.setTimeout(addLight,lightInterval) 
             removeLight()
             currentBulb++ // move to next light 
-            if (currentBulb === lastBulb + 1){currentBulb=1}  
+            if (currentBulb === lastBulb ){currentBulb=0}  
+
         }, lightInterval)
 
         allIntervals.push(eventID)
-        console.log(this.allIntervals)
     }
 
     digitalBoxlight = (elem) => {
@@ -78,7 +80,7 @@ class playEngine {
     constructor (){
         this.allEvents = []
         this.trackValues = []
-        this.playTimeout = 1000
+        this.playTimeout = Number($('#rate').text())
         this.trackOne = 0
         this.trackTwo = 0
         this.trackThree = 0
@@ -107,10 +109,10 @@ class playEngine {
         
 
         const getElement=(elem)=>{
+
             let elemContent = elem.children[0]
             if (elemContent === undefined){}
             else{
-
                 let sourceValue = elemContent.getAttribute('data-value')
                 // add audio
                 playAudio.src = sourceValue
@@ -123,7 +125,7 @@ class playEngine {
         const playLoop=()=>{
             getElement(nodeList[counter])
             counter++
-            if (counter===nodeList.length){counter=1}
+            if (counter===nodeList.length){counter=0}
         }
         // add Interval
         thisInterval = window.setInterval(playLoop,getPlayTime)
@@ -212,9 +214,7 @@ class playEngine {
 class GeneratePadsAndBoxes {
 
     constructor(){
-
         this.mediaContainers = medaiStorage.mediaContainers
-        
         this.allMedia = medaiStorage.allMedia
     }
 
@@ -237,7 +237,7 @@ class GeneratePadsAndBoxes {
                 mainDiv.classList.add('beat-pad')
                 mainDiv.classList.add('button')
                 mainDiv.setAttribute('draggable', 'true')
-                mainDiv.setAttribute('data-value', `media/${containernName}/${mediaName}`)
+                mainDiv.setAttribute('data-value', `${containernName}/${mediaName}`)
                 mainDiv.setAttribute('id', `${mediaName.replaceAll(' ', '')}`)
                 // span
                 let childSpan = document.createElement('span')
@@ -256,21 +256,21 @@ class GeneratePadsAndBoxes {
     
         // Create Containers
         for (let container of this.mediaContainers) {
-        let containserDiv = document.createElement('div')
-        containserDiv.classList.add('beat-container')
-        containserDiv.classList.add('button')
-        // span
-        let contanierspan = document.createElement('span')
-        contanierspan.innerText = container
-        // append span
-        containserDiv.appendChild(contanierspan)
-    
-        // Create Meda Pads
-        createContanierContents(container)
-        // append to document
-        let seclectGroup = $('.group-select')[0]
-        seclectGroup.appendChild(containserDiv)
-    }     
+            let containserDiv = document.createElement('div')
+            containserDiv.classList.add('beat-container')
+            containserDiv.classList.add('button')
+            // span
+            let contanierspan = document.createElement('span')
+            contanierspan.innerText = container
+            // append span
+            containserDiv.appendChild(contanierspan)
+        
+            // Create Meda Pads
+            createContanierContents(container)
+            // append to document
+            let seclectGroup = $('.group-select')[0]
+            seclectGroup.appendChild(containserDiv)
+        }     
     }
 }
 
@@ -317,7 +317,7 @@ class DragEvents {
                 audio.setAttribute("type","audio/wav")
                 audio.play()
                 audio.volume = 1
-                })
+            })
     
         }
     

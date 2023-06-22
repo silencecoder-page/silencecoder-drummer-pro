@@ -9,14 +9,13 @@
     <!-- jquery -->
     <script src="./jquery-3.7.0.min.js" deff></script>
     <!-- custom link -->
-    <link rel="stylesheet" href="lightup.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightup.css">
     <link rel="stylesheet" href="drag.css">
    
     <!-- custom script -->
     <script src="./media.js" defer></script>
     <script src="./background.js" defer></script>
-    <script src="./arrange.js" defer></script>
     <script src="./index.js" defer></script>
    
 </head>
@@ -39,18 +38,18 @@
 
             <div class="navigation-buttons">
                 <ul class="nav-list">
-                    <img src="./icons/home_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
-                    <img src="./icons/equalizer_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
-                    <img src="./icons/settings_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img class="button"  src="./icons/home_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img class="button" src="./icons/equalizer_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img class="button" src="./icons/settings_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
                 </ul>
             </div>
 
             <div class="setting">
 
                 <ul class="setting-list">
-                    <img id="increase-rate" src="./icons/add_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="" srcset=""></li>
+                    <img id="increase-rate" class="button" src="./icons/add_FILL0_wght400_GRAD0_opsz48 (1).svg" alt="" srcset=""></li>
                     <span id="rate">1000</span>
-                    <img id="decrease-rate" src="./icons/minimize_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img id="decrease-rate" class="button" src="./icons/minimize_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
                 </ul>
             </div>
 
@@ -60,9 +59,7 @@
 
         <div class="lighting">
             <ul class="light-list">
-                <li id="lightBorder-1">
-                    <div id="lightBulb-1"></div>
-                </li>
+                <li id="lightBorder-1"><div id="lightBulb-1"></div></li>
                 <li id="lightBorder-2"><div id="lightBulb-2"></div></li>
                 <li id="lightBorder-3"><div id="lightBulb-3"></div></li>
                 <li id="lightBorder-4"><div id="lightBulb-4"></div></li>
@@ -109,17 +106,17 @@
 
             <div class="track-buttons">
                 <div id='track-menu'>
-                    <img id="menu-toggle-close" src="./icons/left_panel_close_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                    <img class="button" id="menu-toggle-close" src="./icons/left_panel_open_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
                     <ul class="track-meun-list-holder">
-                        <li id="add-row" class="track-menu-list-item">ADD ROW</li>
-                        <li id="add-column" class="track-menu-list-item">ADD COLUMN</li>
-                        <li id="del-roll" class="track-menu-list-item">DELETE COLUMN</li>
-                        <li id="reset" class="track-menu-list-item">RESET ALL</li>
+                        <li class="button"  id="add-row" class="track-menu-list-item">ADD ROW</li>
+                        <li  class="button" id="add-column" class="track-menu-list-item">ADD COLUMN</li>
+                        <li class="button" id="del-roll" class="track-menu-list-item">DELETE ROW</li>
+                        <!-- <li id="reset" class="track-menu-list-item">RESET ALL</li> -->
                     </ul>
                 </div>
-                <img id="menu-toggle-open" src="./icons/left_panel_open_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
-                <img id="play-btn" src="./icons/play_arrow_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
-                <img id="stop-btn" src="./icons/stop_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                <img class="button" id="menu-toggle-open" src="./icons/left_panel_close_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                <img class="button" id="play-btn" src="./icons/play_arrow_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+                <img class="button" id="stop-btn" src="./icons/stop_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
             </div>
             
         </div>

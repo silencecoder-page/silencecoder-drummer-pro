@@ -9,9 +9,10 @@
 }
 
 .pad-added span {
-    font-size: 12px;
+    font-size: 10px;
+    color: whitesmoke;
 }
 
-.pad-drag-over {
-    border: 1px dotted white; 
+.track .pad-drag-over {
+    border: 1px dotted rgb(252, 14, 152); 
 }

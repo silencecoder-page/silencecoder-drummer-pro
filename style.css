@@ -1,3 +1,8 @@
+@font-face {
+    font-family:"Poppins";
+    src: url("fonts/Poppins-Black.ttf") format("ttf");
+}
+  
 * {
     padding: 0;
     margin: 0;
@@ -10,10 +15,13 @@ body {
     color: var(--text);
     user-select: none;
     background: var(--bgcolor);
+    font-family: 'Poppins';
 }
 
-img , div img {
-    background-color: aqua;
+img {
+    background: rgba(255, 255, 255, 0.4);
+    display: block;
+    padding: auto;
 }
 
 :root {
@@ -22,6 +30,7 @@ img , div img {
     --button-bg:rgba(85, 77, 77, 0.897);
     --button-bg-hover:rgb(124, 119, 119);
     --button-border:rgba(117, 110, 110, 0.733);
+    --pinky:rgb(255, 6, 255);
 }
 
 /*
@@ -63,7 +72,8 @@ end of scroll
 }
 
 .button:hover {
-    background: var(--button-bg-hover);
+    background-color:rgba(0, 255, 255, 0.8);
+    color: black;
 }
 
 /* Main Section */
@@ -93,7 +103,8 @@ section .home {
 #logo {
     height: inherit;
     width: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
+    background:none;
 }
 
 /* Navigation Menu */
@@ -111,6 +122,7 @@ section .home {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1em;
 }
 
 .nav-list,
@@ -124,11 +136,16 @@ section .home {
     margin-bottom: 5px;
 }
 
+.nav-list img:nth-child(1) {
+    background-color: cyan;
+}
+
+
 #rate {
     border: 1px solid var(--button-bg-hover);
-    padding: 10px;
+    padding: 14px;
     border-radius: 5px;
-    color: var(--text);
+    color: cyan;
 }
 
 .nav-list img, .setting-list img {
@@ -136,15 +153,7 @@ section .home {
     width: auto;
 }
 
-.nav-list li:hover , .setting-list li:hover{
-    background: rgba(109, 104, 104, 0.8);
-}
 
-
-.lighting {
-    height: 10%;
-    width: 100%;
-}
 /* ----------------------arrangement section--------------------------- */
 .arrange {
     height: 200px;
@@ -174,58 +183,52 @@ section .home {
 .track .track-box {
     height: 100%;
     min-width: 5%;
+    max-width: 5%;
 }
 
 /* track buttons */
 .track-buttons {
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.track-buttons .img {
-    height: 10px;
-    width: 10px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    position: relative;
+    gap: 10px;
+}
+
+.track-buttons img {
+    height: 45px;
+    width: 45px;
 }
 
 /* Track Menu List */
 #track-menu {
-    height: 100%;
-    width: 200px;
+    height: inherit;
+    width: 155px;
     position:absolute;
-    top: 0;
     right: 0;
     display: inline-flex;
     color: var(--text);
     display: none;
 }
 
-#track-menu div:hover,
-.track-menu-list-item:hover {
-    background: var(--button-bg-hover);
-}
-
-#track-menu #menu-toggle-close{
+#track-menu #menu-toggle-close {
     height: 100%;
     width: auto;
     max-width: 45px;
     background: var(--button-bg);
     display: block;
+    border-radius: 0;
 }
 
 #track-menu .track-meun-list-holder {
-    height: inherit;
-    width: auto;
+    height: 100%;
+    width: 100%;
     display: block;
     overflow-y: auto;
+    background: var(--button-bg);
 }
 
 #track-menu .track-meun-list-holder li {
@@ -239,9 +242,6 @@ section .home {
     gap: 5px;
 }
 
-#track-menu .track-meun-list-holder li:hover{
-    background: var(--button-bg-hover);
-}
 /* ----------------------arrangement section--------------------------- */
 
 /* 
